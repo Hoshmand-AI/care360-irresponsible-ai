@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
           urgencyLevel: analysis.urgencyLevel,
           possibleCauses: analysis.possibleCauses,
           recommendations: analysis.recommendations,
-          otcSuggestions: analysis.otcSuggestions,
+          otcSuggestions: analysis.otcSuggestions as any,
           warningSignsToWatch: analysis.warningSignsToWatch,
         },
       })
