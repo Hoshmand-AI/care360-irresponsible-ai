@@ -1,7 +1,6 @@
 'use client'
-export const dynamic = 'force-dynamic'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { 
   Search, 
@@ -113,6 +112,14 @@ const MOCK_PLACES: Place[] = [
 ]
 
 export default function FindCarePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <FindCareContent />
+    </Suspense>
+  )
+}
+
+function FindCareContent() {
   const searchParams = useSearchParams()
   const typeParam = searchParams.get('type')
   
