@@ -4,6 +4,7 @@
   "description": "Care360 AI - Full-stack health guidance platform by Hoshmand AI",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
