@@ -1,5 +1,5 @@
-export const dynamic = 'force-dynamic'
 'use client'
+export const dynamic = 'force-dynamic'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 
-export const dynamic = 'force-dynamic'
 export default function LoginPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
